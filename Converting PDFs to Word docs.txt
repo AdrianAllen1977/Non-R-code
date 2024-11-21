@@ -1,0 +1,8 @@
+############################### Convert PDF to Word doc #################################Install pdf2docx using pipsudo pip install pdf2docx## Navigate to the location where your PDF file is and open the Python environmentpython## The three arrows,  '>>>' should appear indicating the python env is open.## From the pdf2docx script, import the Converter function, press enter after typing the text belowfrom pdf2docx import Converter## Now, enter the following text line by line, pressing enter after each## These commands define what the input PDF is and what the output shall be called.\\pdf_file = 'your_pdf_name.pdf'docx_file = 'choose_an_output_name.docx'## Now launch the conversion process using the test below. Press enter after each line.cv = Converter(pdf_file)cv.convert(docx_file) ## The script will now run initially parsing all pages of the PDF and then creating new Word doc pages of the same.## You can follow progress as both these processes proceed page by page##  Now close the conversion process off to complete the PDF productioncv.close()## Once the process is finished, you will see the new docx file appear in the same directory as the original PDF file.## Shut the terminal down.
+
+
+###### Alternative method - especially with password protected PDFs
+
+# in regular terminal window, not with python activated
+
+pdf2docx convert AFBI.pdf --password=Confidential01
